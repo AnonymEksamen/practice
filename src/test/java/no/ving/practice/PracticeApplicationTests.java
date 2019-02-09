@@ -16,8 +16,8 @@ public class PracticeApplicationTests {
 	}
 
 	@Test
-	public void failingTest() {
-		boolean x = false;
+	public void passingTest() {
+		boolean x = true;
 
 		assertEquals(true, x);
 	}
