@@ -1,0 +1,16 @@
+
+resources:
+  - name: git-repo
+    type: git
+    source:
+      #uri: https://github.com/glennbech/pgr301-helloworld
+      uri: https://github.com/AnonymEksamen/practice
+      branch: master
+
+jobs:
+  - name: job-build-and-verify
+    plan:
+      - get: git-repo
+        trigger: true
+      - task: build-and-verify
+        file: git-repo/ci/mvn-build.yml
